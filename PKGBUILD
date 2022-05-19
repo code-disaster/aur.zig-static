@@ -19,7 +19,7 @@ md5sums_x86_64=('2c960ed07491e228664f6d53687f9d3f')
 md5sums_aarch64=('bbe1a9f3db2022fa8a53c0e244824fb1')
 
 package() {
-    cd "$srcdir/zig-linux-${CARCH}-$pkgver"
+    cd "$srcdir/zig-linux-${CARCH}-$pkgver$zigver"
     install -D zig "$pkgdir/usr/bin/zig"
     install -D LICENSE "$pkgdir/usr/share/licenses/zig/LICENSE"
     cp -r lib "$pkgdir/usr"
